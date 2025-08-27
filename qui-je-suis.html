@@ -1,55 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Ma Présentation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    /* Styles identiques aux tiens... */
-    /* [Je garde tout le style, pas besoin de tout réécrire ici] */
-
-    audio {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Qui je suis</title>
 </head>
 <body>
+    <div class="bio-card">
+        <div class="bio-image">
+            <img src="image.webp" alt="Mon image">
+        </div>
 
-  <div class="bio-card">
-    <div class="bio-image">
-      <img src="image.webp" alt="Mon image"> 
+        <h1>Qui suis-je ?</h1>
+        <p class="bio-desc">
+            Je suis un créateur de site html, j'apprends le langage Python. Je joue à toute sorte de jeux vidéo, je suis quelqu’un comme tout le monde.
+            Je fais des dessins sur des plateformes comme Openart. J’ai appris à coder grâce à Lemoustik.
+        </p>
+
+        <!-- 🎵 Audio -->
+        <audio id="music">
+            <source src="for-tomorrow.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l’audio HTML5.
+        </audio>
+
+        <!-- 🎵 Bouton -->
+        <button id="ambianceBtn">🎧 Lancer la musique</button>
     </div>
 
-    <h1>𝔖𝔱𝔦𝔠𝔙𝔲𝔦𝔩𝔡𝔢𝔯</h1>
-    <p class="bio-desc">
-      Je suis un créateur de site html, j'apprends le langage Python. Je joue à toute sorte de jeux vidéo, je suis quelqu’un comme tout le monde. Je fais des dessins sur des plateformes comme Openart. J’ai appris à coder grâce à Lemoustik, suivez-le !
-    </p>
+    <script>
+        const btn = document.getElementById('ambianceBtn');
+        const music = document.getElementById('music');
 
-    <!-- 🔊 Musique -->
-    <audio id="music" autoplay loop>
-      <source src="for-tomorrow.mp3" type="audio/mpeg">
-      Votre navigateur ne supporte pas l’audio HTML5.
-    </audio>
-
-    <!-- 🎵 Bouton de lancement (optionnel) -->
-    <button id="ambianceBtn">Lancer la musique 🎵</button>
-
-  </div>
-
-  <script>
-    const btn = document.getElementById('ambianceBtn');
-    const music = document.getElementById('music');
-
-    btn.addEventListener('click', () => {
-      music.play();
-      btn.textContent = "🎶 Ambiance lancée !";
-      btn.disabled = true;
-      btn.style.opacity = 0.7;
-    });
-  </script>
-
+        btn.addEventListener('click', () => {
+            music.play();
+            btn.textContent = "🎶 Ambiance lancée !";
+            btn.disabled = true;
+            btn.style.opacity = 0.7;
+        });
+    </script>
 </body>
 </html>
-
-
-
